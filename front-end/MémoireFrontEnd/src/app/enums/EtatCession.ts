@@ -1,0 +1,4 @@
+enum EtatCession{
+    ACTUEL,
+    REVOLU
+}

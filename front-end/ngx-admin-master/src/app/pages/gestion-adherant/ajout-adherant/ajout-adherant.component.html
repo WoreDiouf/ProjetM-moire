@@ -1,0 +1,70 @@
+<!-- <mat-toolbar color="primary">
+    <div fxhide.gt-xs>
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+</mat-toolbar> -->
+  
+<form class="form-horizontal">
+    <input type="hidden" class="form-control" >
+    <div class="form-group row card-header">
+      <h2 class="text-center">Ajout des Adhérant de la CESPI </h2>
+      
+      <div class="col-md-6 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" id="nom" placeholder="Nom" [(ngModel)]="adherant.nom" name="nom" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" id="prenom" placeholder="Prenom" [(ngModel)]="adherant.prenom" name="prenom" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" id="sexe" placeholder="Sexe" [(ngModel)]="adherant.sexe" name="sexe">
+          <select type="text" class="form-control" id="sexe" placeholder="Sexe" [(ngModel)]="adherant.sexe" name="sexe" required>
+            <option value="">--Choissir le sexe ci-dessous--</option>
+            <option>Masculin</option>
+            <option>Feminin</option>
+            </select>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" id="telephone" placeholder="Telephone" [(ngModel)]="adherant.telephone" name="telephone" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field >
+          <input matInput [matDatepicker]="picker" id="date_adhesion" placeholder="Date Adhesion" (click)="picker.open()" [(ngModel)]="adherant.date_adhesion" name="date_adhesion" required>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+     
+      <div class="col-md-6 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" id="matricule" placeholder="Matricule" [(ngModel)]="adherant.matricule" name="matricule" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput type="email" class="form-control" id="email" placeholder="Courriel" [(ngModel)]="adherant.email" name="email" required>
+        </mat-form-field>
+      </div>
+      <div class="col-md-6 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" class="form-control" id="etablissement" placeholder="Etablissement" [(ngModel)]="adherant.etablissement" name="etablissement" required>
+        </mat-form-field>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary" (click)="AdherantNow()">Enregistrer</button>
+      </div>
+      <div>
+        <h4>{{message}} </h4>
+      </div>
+    </div>
+</form>
+  

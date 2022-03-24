@@ -1,0 +1,67 @@
+
+
+
+
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="card">
+        <form class="form-horizontal">
+          <input type="hidden" class="form-control" >
+            <div class="card-header card-header-success card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons"></i>
+              </div>
+              <h3 class="card-title">Ajout des Adhérant de la CESPI</h3>
+            
+              <div class="subcard">  
+                <div class="row">
+                  <div class="form-group col-sm-6 flex-column d-flex"> 
+                    <label class="form-control-label px-3">Nom<span class="text-danger"> *</span></label> 
+                    <input type="text" class="form-control" id="nom" [(ngModel)]="adherant.nom" name="nom" onblur="validate(6)"> 
+                  </div>
+                  <div class="form-group col-sm-6 flex-column d-flex"> 
+                    <label class="form-control-label px-3">Prenom<span class="text-danger"> *</span></label> 
+                    <input type="text" class="form-control" id="prenom" [(ngModel)]="adherant.prenom" name="prenom" onblur="validate(6)"> 
+                  </div>    
+                  <div class="form-group col-sm-6 flex-column d-flex">
+                      <label class="form-control-label px-3">Sexe<span class="text-danger"> *</span></label>
+                      <select type="text" class="form-control" id="sexe"[(ngModel)]="adherant.sexe" name="sexe" required>
+                        <option value="">--Choissir le sexe ci-dessous--</option>
+                        <option>Masculin</option>
+                        <option>Feminin</option>
+                      </select>
+                  </div>
+                  <div class="form-group col-sm-6 flex-column d-flex"> 
+                    <label class="form-control-label px-3">Telephone<span class="text-danger"> *</span></label> 
+                    <input type="text" class="form-control" id="telephone" [(ngModel)]="adherant.telephone" name="telephone" onblur="validate(6)"> 
+                  </div>
+                  <div class="form-group col-sm-6 flex-column d-flex"> 
+                    <label class="form-control-label px-3">Courriel<span class="text-danger"> *</span></label> 
+                    <input type="email" class="form-control" id="email" [(ngModel)]="adherant.email" name="email" onblur="validate(6)"> 
+                  </div>
+                  <div class="form-group col-sm-6 flex-column d-flex"> 
+                    <label class="form-control-label px-3">Etablissement<span class="text-danger"> *</span></label> 
+                    <input type="text" class="form-control" id="etablissement" [(ngModel)]="adherant.etablissement" name="etablissement" onblur="validate(6)"> 
+                  </div>
+                  <div class="form-group col-sm-6 flex-column d-flex"> 
+                    <label class="form-control-label px-3">Matricule<span class="text-danger"> *</span></label> 
+                    <input type="text" class="form-control" id="matricule" [(ngModel)]="adherant.matricule" name="matricule" onblur="validate(6)"> 
+                  </div>
+                  <div class="form-group col-sm-6 flex-column d-flex"> 
+                    <label class="form-control-label px-3">Date Adhésion<span class="text-danger"> *</span></label> 
+                    <input type="date" class="form-control" id="date_adhesion" [(ngModel)]="adherant.date_adhesion" name="date_adhesion" onblur="validate(6)"> 
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" (click)="AdherantNow()">Enregistrer</button>
+             </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+  

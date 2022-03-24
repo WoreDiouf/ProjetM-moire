@@ -1,0 +1,5 @@
+ enum TypeCompte{
+
+    ACTIF,
+    INACTIF
+}
